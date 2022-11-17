@@ -3,6 +3,8 @@ services:
     cms-main:
         image: snslabdocker/cms_main
         container_name: cms_main
+        depends_on:
+          - cms-main-db
         restart: always
         command: sh -c "/bin/bash start_cms.sh"
         ports:
@@ -20,3 +22,6 @@ services:
           - POSTGRES_PASSWORD=20121208
         ports:
           - "5432:5432"
+
+    # cms-shelter:
+    # cms-shelter-db:
