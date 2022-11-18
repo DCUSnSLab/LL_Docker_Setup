@@ -20,12 +20,7 @@ services:
         depends_on:
           - cms-shelter-db
         restart: always
-        #command: sh -c "/bin/bash start_cms.sh"
-        command: /bin/bash -c "while true; do echo test; sleep 100; done"
+        command: sh -c "/bin/bash /root/LivingLab-ShelterServer/local_shelter_server/start_shelter.sh"
+        #command: /bin/bash -c "while true; do echo test; sleep 100; done"
         ports:
           - "8001:8000"
-
-
-
-    # cms-shelter:
-    # cms-shelter-db:
