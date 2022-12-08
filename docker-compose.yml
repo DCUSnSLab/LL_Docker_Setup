@@ -19,7 +19,7 @@ services:
         depends_on:
           - cms-main-db
         restart: always
-        command: sh -c "/bin/bash /root/LivingLab-CCS/Livinglab_CMS/Livinglab/Livinglab-CMS(Main)/cms_main_server/start_cms.sh"
+        command: sh -c "/bin/bash /root/LivingLab-CCS/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/start_cms.sh"
         #command: /bin/bash -c "while true; do echo test; sleep 100; done"
         ports:
           - "8000:8000"
