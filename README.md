@@ -4,9 +4,21 @@
 
 # Docker image
 
-snslabdocker/cms_main
+## snslabdocker/cms_main
+Main 서버가 실행되는 image입니다.
 
-snslabdocker/cms_shelter
+root 경로에 [LivingLab-CCS (Main Branch)](https://github.com/DCUSnSLab/LivingLab-CCS/tree/Main)가 clone되어 있으며,
+
+docker-compose를 통한 최초 Deploy 진행 시
+
+Livinglab_CMS/Livinglab/Livinglab-CMS(Main)/cms_main_server/start_cms.sh
+
+에 있는 스크립트 실행을 통해 Main 서버를 시작합니다.
+
+## snslabdocker/cms_shelter
+Shelter 서버가 실행되는 image입니다.
+
+
 
 # 설치
 
