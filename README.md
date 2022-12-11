@@ -2,9 +2,19 @@
 
 리빙랩 CMS의 메인 서버, 쉘터 서버 Deploy를 용이하게 진행하기 위한 저장소입니다.
 
+# Docker image
+
+snslabdocker/cms_main
+
+snslabdocker/cms_shelter
+
 # 설치
 
 해당 저장소 clone 후 아래 명령어 수행
+
+하나의 Host에 Main, Shelter 둘 다 구축하는 경우
+
+```docker-compose -f docker-compose.yml up -d```
 
 CMS Main 서버만 구축하는 경우
 
