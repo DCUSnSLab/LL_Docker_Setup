@@ -2,23 +2,33 @@
 
 리빙랩 CMS의 메인 서버, 쉘터 서버 Deploy를 용이하게 진행하기 위한 저장소입니다.
 
-# Docker image
+# 이미지 및 포트 구성
 
 ## snslabdocker/cms_main
 Main 서버가 실행되는 image입니다.
 
 root 경로에 [LivingLab-CCS (Main Branch)](https://github.com/DCUSnSLab/LivingLab-CCS/tree/Main)가 clone되어 있으며,
 
-docker-compose를 통한 최초 Deploy 진행 시
+docker-compose를 통한 최초 Deploy 수행 시
 
 Livinglab_CMS/Livinglab/Livinglab-CMS(Main)/cms_main_server/start_cms.sh
 
 에 있는 스크립트 실행을 통해 Main 서버를 시작합니다.
 
+서비스를 위해 Host의 8000 포트를 사용합니다.
+
 ## snslabdocker/cms_shelter
 Shelter 서버가 실행되는 image입니다.
 
+root 경로에 [LivingLab-ShelterServer (LP-86shelterCMS_ADD Branch)](https://github.com/DCUSnSLab/LivingLab-ShelterServer/tree/LP-86shelterCMS_ADD)가 clone되어 있으며,
 
+docker-compose를 통한 최초 Deploy 수행 시
+
+local_shelter_server/start_shelter.sh
+
+에 있는 스크립트 실행을 통해 Shelter 서버를 시작합니다.
+
+서비스를 위해 Host의 8001 포트를 사용합니다.
 
 # 설치
 
@@ -35,10 +45,3 @@ CMS Main 서버만 구축하는 경우
 CMS Shelter 서버만 구축하는 경우
 
 ```docker-compose -f docker-compose_main.yml up -d```
-
-### TODO List
-- 최초 실행 시 필요한 일부 과정 자동화
-  - [X] docker-compose 후 db migration 자동화
-  - [X] Django 관리자 계정 생성
-  - [ ] FTP 동기화 서버 실행
-- [ ] 기능 동작 테스트
