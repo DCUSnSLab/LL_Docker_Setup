@@ -1,0 +1,25 @@
+version: "3"
+services:
+    cms-main-db:
+      image: postgres
+      container_name: cms_main_db
+      restart: always
+      volumes:
+        - ./data/main/postgres:/var/lib/postgresql/data
+      environment:
+        - POSTGRES_DB=cms_main_server
+        - POSTGRES_USER=main
+        - POSTGRES_PASSWORD=20121208
+      ports:
+        - "5432:5432"
+
+    cms-main:
+        image: snslabdocker/cms_main
+        container_name: cms_main
+        depends_on:
+          - cms-main-db
+        restart: always
+        command: sh -c "/bin/bash /root/LivingLab-CCS/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/start_cms.sh"
+        #command: /bin/bash -c "while true; do echo test; sleep 100; done"
+        ports:
+          - "8000:8000"

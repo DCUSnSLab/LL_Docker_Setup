@@ -1,0 +1,54 @@
+version: "3"
+services:
+    cms-main-db:
+      image: mysql:latest
+      container_name: cms_main_db
+      restart: always
+      volumes:
+        - ./data/main/mysql:/var/lib/mysql
+      environment:
+        - MYSQL_DB=cms_main_server
+        - MYSQL_USER=main
+        - MYSQL_ROOT_PASSWORD=20121208
+      ports:
+        - "3306:3306"
+
+    cms-main:
+        image: snslabdocker/cms_main
+        container_name: cms_main
+        depends_on:
+          - cms-main-db
+        restart: always
+        command: sh -c "/bin/bash /root/LivingLab-CCS/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/start_cms.sh"
+        #command: /bin/bash -c "while true; do echo test; sleep 100; done"
+        ports:
+          - "8000:8000"
+        environment:
+          - DATABASE_IP=cms-main-db
+
+    cms-shelter-db:
+      image: mysql:latest
+      container_name: cms_shelter_db
+      restart: always
+      volumes:
+        - ./data/shelter/mysql:/var/lib/mysql
+      environment:
+        - MYSQL_DB=cms_shelter_server
+        - MYSQL_USER=shelter
+        - MYSQL_ROOT_PASSWORD=20121208
+      ports:
+        - "3307:3306"
+
+    cms-shelter:
+        image: snslabdocker/cms_shelter
+        container_name: cms_shelter
+        depends_on:
+          - cms-shelter-db
+        restart: always
+        command: sh -c "/bin/bash /root/LivingLab-ShelterServer/local_shelter_server/start_shelter.sh"
+        #command: /bin/bash -c "while true; do echo test; sleep 100; done"
+        ports:
+          - "8001:8000"
+          - "5000:5000"
+        environment:
+          - DATABASE_IP=cms-shelter-db
