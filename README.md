@@ -50,3 +50,7 @@ CMS Main 서버만 구축하는 경우
 CMS Shelter 서버만 구축하는 경우
 
 ```docker-compose -f docker-compose_main.yml up -d```
+
+# 설정
+
+각각의 docker-compose_*.yml 파일의 HOST_IP 환경변수 옵션을 현재 장치의 ip 주소로 설정해야 합니다. (QR Code 생성 및 접근을 위함) 

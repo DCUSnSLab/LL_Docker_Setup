@@ -24,6 +24,7 @@ services:
         ports:
           - "8000:8000"
         environment:
+          - HOST_IP=203.250.32.193
           - DATABASE_IP=cms-main-db
 
     cms-shelter-db:
@@ -52,4 +53,5 @@ services:
           - "8001:8000"
           - "5000:5000"
         environment:
+          - HOST_IP=0.0.0.0
           - DATABASE_IP=cms-shelter-db
