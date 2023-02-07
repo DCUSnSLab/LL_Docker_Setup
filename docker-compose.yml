@@ -23,6 +23,7 @@ services:
         #command: /bin/bash -c "while true; do echo test; sleep 100; done"
         ports:
           - "8000:8000"
+          - "9021:9021"
         environment:
           - HOST_IP=203.250.32.193
           - DATABASE_IP=cms-main-db
