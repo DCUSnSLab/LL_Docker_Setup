@@ -21,10 +21,13 @@ services:
         restart: always
         ports:
           - "8000:8000"
-          - "9021:9021"
+          - "9022:9021"
+          - "9999:9999"
         environment:
           - HOST_IP=203.250.32.193
           - DATABASE_IP=cms-main-db
+        volumes:
+          - ./data/main:/root/LivingLab-CCS/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/media
         command: sh -c "/bin/bash /root/LivingLab-CCS/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/start_cms.sh"
         #command: /bin/bash -c "while true; do echo test; sleep 100; done"
 
@@ -53,14 +56,18 @@ services:
           - "8001:8000"
           - "3000:3000"
           - "5000:5000"
+          - "9021:9021"
+          - "9998:9999"
         environment:
           - CMS_MAIN_IP=203.250.32.193
           - DATABASE_IP=cms-shelter-db
+        links:
+          - cms-shelter-db
         #command: sh -c "/bin/bash /root/LivingLab-CMS-IDLE/Client/client_react/start_idle.sh"
-        command:
-          - sh /root/LivingLab-CMS-IDLE/Client/client_react/start_idle.sh
         #command:
-        #  - sh /root/LivingLab-ShelterServer/local_shelter_server/start_shelter.sh
+        #  - sh /root/LivingLab-CMS-IDLE/Client/client_react/start_idle.sh
+        command:
+          - sh /root/LivingLab-ShelterServer/local_shelter_server/start_shelter.sh
         #command: sh -c "/bin/bash /root/LivingLab-ShelterServer/local_shelter_server/start_shelter.sh"
           # && sh -c "/bin/bash /root/LivingLab-CMS-IDLE/Client/client_react/start_idle.sh"
           #entrypoint: ["/bin/bash","-c"]
