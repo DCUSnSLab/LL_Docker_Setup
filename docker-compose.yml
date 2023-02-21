@@ -5,7 +5,7 @@ services:
       container_name: cms_main_db
       restart: always
       volumes:
-        - ./data/main/postgres:/var/lib/postgresql/data
+        - ./data/main_db/postgres:/var/lib/postgresql/data
       environment:
         - POSTGRES_DB=cms_main_server
         - POSTGRES_USER=main
@@ -37,7 +37,7 @@ services:
       restart: always
       command: -p 5433
       volumes:
-        - ./data/shelter/postgres:/var/lib/postgresql/data
+        - ./data/shelter_db/postgres:/var/lib/postgresql/data
       environment:
         - POSTGRES_DB=cms_shelter_server
         - POSTGRES_USER=shelter
@@ -66,11 +66,11 @@ services:
         #command: sh -c "/bin/bash /root/LivingLab-CMS-IDLE/Client/client_react/start_idle.sh"
         #command:
         #  - sh /root/LivingLab-CMS-IDLE/Client/client_react/start_idle.sh
+
+        volumes:
+          - ./data/shelter:/local_shelter_server
+
         command:
-          - sh /root/LivingLab-ShelterServer/local_shelter_server/start_shelter.sh
-        #command: sh -c "/bin/bash /root/LivingLab-ShelterServer/local_shelter_server/start_shelter.sh"
-          # && sh -c "/bin/bash /root/LivingLab-CMS-IDLE/Client/client_react/start_idle.sh"
-          #entrypoint: ["/bin/bash","-c"]
-          #command: /bin/bash -c "while true; do echo test; sleep 100; done"
-        #command:
+          # - sh /root/LivingLab-ShelterServer/local_shelter_server/start_shelter.sh
+          - sh /root/LivingLab-CMS-IDLE_boeun/start_shelter.sh
         #  - while true; do echo test; sleep 100; done
