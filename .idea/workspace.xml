@@ -30,7 +30,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Development/DCU_Online_Judge_Backend",
+    "last_opened_file_path": "D:/Development/Docker 실습",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,7 +59,11 @@
       <workItem from="1672055479323" duration="328000" />
       <workItem from="1675663835647" duration="5348000" />
       <workItem from="1675756477927" duration="30308000" />
-      <workItem from="1676523262015" duration="12850000" />
+      <workItem from="1676523262015" duration="22121000" />
+      <workItem from="1677499431883" duration="2597000" />
+      <workItem from="1677731282753" duration="1144000" />
+      <workItem from="1677826051348" duration="5367000" />
+      <workItem from="1678092839484" duration="4049000" />
     </task>
     <task id="LOCAL-00001" summary="CMS setup via docker-compose">
       <created>1668699793060</created>

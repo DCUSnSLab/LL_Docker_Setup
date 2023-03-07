@@ -46,8 +46,8 @@ services:
         - "5433:5433"
 
     cms-shelter:
-        # image: snslabdocker/cms_shelter
         image: snslabdocker/cms_shelter
+        #image: snslabserver/cms_shelter
         container_name: cms_shelter
         depends_on:
           - cms-shelter-db
@@ -68,9 +68,8 @@ services:
         #  - sh /root/LivingLab-CMS-IDLE/Client/client_react/start_idle.sh
 
         volumes:
-          - ./data/shelter:/local_shelter_server
+          - ./data/shelter:/root/LivingLab-CMS-IDLE_boeun/Client/client_react/public/ftp
 
         command:
-          # - sh /root/LivingLab-ShelterServer/local_shelter_server/start_shelter.sh
           - sh /root/LivingLab-CMS-IDLE_boeun/start_shelter.sh
         #  - while true; do echo test; sleep 100; done
