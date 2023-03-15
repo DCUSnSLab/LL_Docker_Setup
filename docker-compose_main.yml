@@ -5,7 +5,7 @@ services:
       container_name: cms_main_db
       restart: always
       volumes:
-        - ./data/main/postgres:/var/lib/postgresql/data
+        - ./data/main_db/postgres:/var/lib/postgresql/data
       environment:
         - POSTGRES_DB=cms_main_server
         - POSTGRES_USER=main
@@ -19,7 +19,14 @@ services:
         depends_on:
           - cms-main-db
         restart: always
-        command: sh -c "/bin/bash /root/LivingLab-CCS/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/start_cms.sh"
-        #command: /bin/bash -c "while true; do echo test; sleep 100; done"
         ports:
           - "8000:8000"
+          - "9022:9021"
+          - "9999:9999"
+        environment:
+          - HOST_IP=203.250.32.193
+          - DATABASE_IP=cms-main-db
+        volumes:
+          - ./data/main:/root/LivingLab-CCS/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/media
+        command: sh -c "/bin/bash /root/LivingLab-CCS/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/start_cms.sh"
+        #command: /bin/bash -c "while true; do echo test; sleep 100; done"

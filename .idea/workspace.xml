@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d877107-c54a-4122-85ca-dd1ec34475e6" name="Changes" comment="Update docker-compose(CMS shelter)">
-      <change afterPath="$PROJECT_DIR$/docker-compose_test.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose_main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose_main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose_shelter.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose_shelter.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose_legacy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerfiles/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfiles/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,22 +29,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Development/CMS_Deploy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Development/CMS_Deploy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Development\CMS_Deploy\dockerfiles" />
       <recent name="D:\Development\CMS_Deploy" />
       <recent name="C:\Users\junhp\OneDrive\바탕 화면\박준홍\Development\CMS_Deploy" />
     </key>
@@ -64,7 +69,11 @@
       <workItem from="1677499431883" duration="2597000" />
       <workItem from="1677731282753" duration="1144000" />
       <workItem from="1677826051348" duration="5367000" />
-      <workItem from="1678092839484" duration="12466000" />
+      <workItem from="1678092839484" duration="16841000" />
+      <workItem from="1678263581383" duration="1349000" />
+      <workItem from="1678368712006" duration="292000" />
+      <workItem from="1678424916863" duration="7438000" />
+      <workItem from="1678726436199" duration="4396000" />
     </task>
     <task id="LOCAL-00001" summary="CMS setup via docker-compose">
       <created>1668699793060</created>

@@ -45,7 +45,9 @@ ENV PATH $NODE_PATH:$PATH
 RUN git clone -b "Shelter" https://github.com/DCUSnSLab/LivingLab-ShelterServer.git
 
 # CMS IDLE Page
-RUN git clone -b "LP-58_idle" https://github.com/DCUSnSLab/LivingLab-CMS-IDLE.git
+# For refresh cache
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+RUN git clone -b "IDLE_2" https://github.com/DCUSnSLab/LivingLab-CMS-IDLE.git
 
 WORKDIR /root/LivingLab-CMS-IDLE/Client/client_react
 RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm use --delete-prefix $NODE_VERSION && npm install"
