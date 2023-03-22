@@ -4,6 +4,8 @@
 
 # 이미지 별 정보
 
+Dockerfile 참고
+
 ## snslabdocker/cms_main
 Main 서버가 실행되는 image입니다.
 
