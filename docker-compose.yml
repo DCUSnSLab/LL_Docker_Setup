@@ -14,7 +14,8 @@ services:
         - "5432:5432"
 
     cms-main:
-        image: snslabdocker/cms_main
+        image: snslabdocker/cms_main:0.5
+        # image: snslabdocker/cms_main
         container_name: cms_main
         depends_on:
           - cms-main-db
@@ -28,7 +29,7 @@ services:
           - DATABASE_IP=cms-main-db
         volumes:
           - ./data/main:/root/LivingLab-CCS/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/media
-        command: sh -c "/bin/bash /root/LivingLab-CCS/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/start_cms.sh"
+        # command: sh -c "/bin/bash /root/LivingLab-CCS/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/start_cms.sh"
         #command: /bin/bash -c "while true; do echo test; sleep 100; done"
 
     cms-shelter-db:
@@ -46,7 +47,7 @@ services:
         - "5433:5433"
 
     cms-shelter:
-        image: snslabdocker/cms_shelter:1.3
+        image: snslabdocker/cms_shelter:1.5
         #image: snslabserver/cms_shelter
         container_name: cms_shelter
         depends_on:
