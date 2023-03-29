@@ -4,7 +4,7 @@ services:
       image: postgres
       container_name: cms_shelter_db
       restart: always
-      # command: -p 5433 # port change for Test in one host device
+      command: -p 5433
       volumes:
         - ./data/shelter_db/postgres:/var/lib/postgresql/data
       environment:
@@ -12,11 +12,10 @@ services:
         - POSTGRES_USER=shelter
         - POSTGRES_PASSWORD=20121208
       ports:
-        # - "5433:5433"
-        - "5432:5432"
+        - "5433:5433"
 
     cms-shelter:
-        image: snslabdocker/cms_shelter:0.9
+        image: snslabdocker/cms_shelter:1.5
         #image: snslabserver/cms_shelter
         container_name: cms_shelter
         depends_on:
@@ -29,7 +28,8 @@ services:
           - "9021:9021"
           - "9999:9999"
         environment:
-          - CMS_MAIN_IP=203.250.32.193
+          - CMS_MAIN_IP=203.250.32.193 # 메인 PC IP 주소
+          - CMS_SHELTER_IP=203.250.32.193 # 쉘터의 IP 주소
           - DATABASE_IP=cms-shelter-db
         links:
           - cms-shelter-db

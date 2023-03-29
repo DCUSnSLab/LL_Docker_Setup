@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d877107-c54a-4122-85ca-dd1ec34475e6" name="Changes" comment="Dockerfile modify">
+    <list default="true" id="6d877107-c54a-4122-85ca-dd1ec34475e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerfiles/main/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfiles/main/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose_main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose_main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose_shelter.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose_shelter.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,20 +26,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Development/CMS_Deploy/dockerfiles",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Development/CMS_Deploy/dockerfiles&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Development\CMS_Deploy\dockerfiles" />
@@ -77,7 +77,9 @@
       <workItem from="1678726436199" duration="7827000" />
       <workItem from="1678941844601" duration="1571000" />
       <workItem from="1679148177125" duration="591000" />
-      <workItem from="1679215465838" duration="22488000" />
+      <workItem from="1679215465838" duration="24582000" />
+      <workItem from="1679808867435" duration="575000" />
+      <workItem from="1680077994298" duration="30000" />
     </task>
     <task id="LOCAL-00001" summary="CMS setup via docker-compose">
       <created>1668699793060</created>
@@ -128,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679450940275</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Dockerfile, docker-compose modify">
+      <created>1679492696303</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679492696303</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +161,7 @@
     <MESSAGE value="Modify docker compose" />
     <MESSAGE value="modify Dockerfile and docker-compose" />
     <MESSAGE value="Dockerfile path redirection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile path redirection" />
+    <MESSAGE value="Dockerfile, docker-compose modify" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile, docker-compose modify" />
   </component>
 </project>
