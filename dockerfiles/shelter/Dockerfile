@@ -44,12 +44,12 @@ ENV NODE_PATH $NVM_DIR/versions/node/$NODE_VERSION/bin
 ENV PATH $NODE_PATH:$PATH
 
 # Shelter server (Django based db construct)
-ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone -b "Shelter" https://github.com/DCUSnSLab/LivingLab-ShelterServer.git
 
 # CMS IDLE Page
 # For refresh cache
-# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone -b "IDLE_2" https://github.com/DCUSnSLab/LivingLab-CMS-IDLE.git
 
 WORKDIR /root/LivingLab-CMS-IDLE/Client/client_react
