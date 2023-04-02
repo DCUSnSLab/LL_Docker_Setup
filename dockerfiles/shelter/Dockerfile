@@ -7,6 +7,7 @@ MAINTAINER snslabdocker
 WORKDIR /root
 
 RUN apt-get update -y
+RUN apt-get upgrade -y
 
 RUN apt-get install vim -y
 
@@ -49,16 +50,28 @@ RUN git clone -b "Shelter" https://github.com/DCUSnSLab/LivingLab-ShelterServer.
 
 # CMS IDLE Page
 # For refresh cache
-ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone -b "IDLE_2" https://github.com/DCUSnSLab/LivingLab-CMS-IDLE.git
 
+# WiFi page
+# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+RUN git clone -b "main" https://github.com/DCUSnSLab/LivinglabWiFi.git
+
+# OLD CMS Page
+# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+RUN git clone -b "master" https://github.com/DCUSnSLab/Livinglab-CMS-OLD.git
+
 WORKDIR /root/LivingLab-CMS-IDLE/Client/client_react
+RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm use --delete-prefix $NODE_VERSION && npm install"
+
+WORKDIR /root/LivinglabWiFi
 RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm use --delete-prefix $NODE_VERSION && npm install"
 
 WORKDIR /root/LivingLab-CMS-IDLE
 # Service ports
 EXPOSE 3000
 EXPOSE 5000
+EXPOSE 7000
 EXPOSE 8000
 EXPOSE 9021
 EXPOSE 9999
