@@ -7,7 +7,6 @@ MAINTAINER snslabdocker
 WORKDIR /root
 
 RUN apt-get update -y
-RUN apt-get upgrade -y
 
 RUN apt-get install vim -y
 
@@ -45,7 +44,7 @@ ENV NODE_PATH $NVM_DIR/versions/node/$NODE_VERSION/bin
 ENV PATH $NODE_PATH:$PATH
 
 # Shelter server (Django based db construct)
-# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone -b "Shelter" https://github.com/DCUSnSLab/LivingLab-ShelterServer.git
 
 # CMS IDLE Page
@@ -54,12 +53,16 @@ RUN git clone -b "Shelter" https://github.com/DCUSnSLab/LivingLab-ShelterServer.
 RUN git clone -b "IDLE_2" https://github.com/DCUSnSLab/LivingLab-CMS-IDLE.git
 
 # WiFi page
-# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+#ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone -b "main" https://github.com/DCUSnSLab/LivinglabWiFi.git
 
 # OLD CMS Page
 # ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone -b "master" https://github.com/DCUSnSLab/Livinglab-CMS-OLD.git
+
+# Add symbolic link to IDLE page
+WORKDIR /root/LivinglabWiFi/public
+RUN ln -s /root/LivingLab-CMS-IDLE/Client/client_react/public simdir
 
 WORKDIR /root/LivingLab-CMS-IDLE/Client/client_react
 RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm use --delete-prefix $NODE_VERSION && npm install"

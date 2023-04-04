@@ -62,6 +62,26 @@ CMS Shelter 서버만 구축하는 경우
 docker-compose -f docker-compose_main.yml up -d
 ```
 
-# 설정
+# 초기 구성
+
+## Main
+
+localhost:8000/admin 경로로 이동 후 아래 admin 계정으로 로그인
+
+- id : admin
+- pw : 20121208
+
+이후 사이트 관리 아래 메뉴의 Custom users를 추가한다.
+
+User auth 및 User status는 각각 Super_Admin, ACTIVATE 로 설정한다.
+
+localhost:8000/ 로 이동한 다음, 메인 메뉴의 계정인증 버튼을 누르고 아래 admin 계정으로 로그인한다.
+
+- id : admin
+- pw : 20121208
+
+이후 해당 페이지에서 쉘터 등록 및 컨텐츠 업로드를 수행한다.
+
+## Shelter
 
 각각의 docker-compose_*.yml 파일의 HOST_IP 환경변수 옵션을 현재 장치의 ip 주소로 설정해야 합니다. (QR Code 생성 및 접근을 위함)
