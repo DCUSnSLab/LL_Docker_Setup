@@ -8,9 +8,9 @@
 
 ### 환경 구성
 
-- Python
-- NVM(NPM)
-- Django
+- Ubuntu 22.04
+- Python 3.10.6
+- Django 4.1.7
 
 ### 내용
 
@@ -29,6 +29,14 @@ Livinglab_CMS/Livinglab/Livinglab-CMS(Main)/cms_main_server/start_cms.sh
 8000번 포트를 통해 서비스를 제공합니다.
 
 ## snslabdocker/cms_shelter
+
+### 환경 구성
+
+- Ubuntu 22.04
+- Python 3.10.6
+- NVM(NPM) 8.15.0
+- Django 4.2
+
 Shelter 서버가 실행되는 image입니다.
 
 root 경로에
