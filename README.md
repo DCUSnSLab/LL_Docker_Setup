@@ -4,9 +4,16 @@
 
 # 이미지 별 정보
 
-Dockerfile 참고
-
 ## snslabdocker/cms_main
+
+### 환경 구성
+
+- Python
+- NVM(NPM)
+- Django
+
+### 내용
+
 Main 서버가 실행되는 image입니다.
 
 root 경로에 [LivingLab-CCS (Main Branch)](https://github.com/DCUSnSLab/LivingLab-CCS/tree/Main)가 clone되어 있으며,
