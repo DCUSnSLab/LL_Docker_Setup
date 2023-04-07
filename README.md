@@ -74,8 +74,11 @@ docker-compose -f docker-compose_main.yml up -d
 CMS Shelter 서버만 구축하는 경우
 
 ```
-docker-compose -f docker-compose_main.yml up -d
+docker-compose -f docker-compose_shelter.yml up -d
 ```
+
+각각의 .yml 파일 내에 있는 환경 변수를 설정해야 합니다.
+(docker-compose_shelter.yml 내용 참고)
 
 # 초기 구성
 
