@@ -15,7 +15,7 @@ services:
         - "5433:5433"
 
     cms-shelter:
-        image: snslabdocker/cms_shelter:1.9
+        image: snslabdocker/cms_shelter:2.3
         #image: snslabserver/cms_shelter
         container_name: cms_shelter
         depends_on:
