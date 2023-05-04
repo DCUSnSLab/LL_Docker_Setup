@@ -80,6 +80,12 @@ docker-compose -f docker-compose_shelter.yml up -d
 각각의 .yml 파일 내에 있는 환경 변수를 설정해야 합니다.
 (docker-compose_shelter.yml 내용 참고)
 
+메인 및 쉘터 컨테이너의 이미지가 최신 태그인지 아래 링크에서 확인 후 버전 변경 후 진행하도록 합니다.
+
+[cms_main](https://hub.docker.com/r/snslabdocker/cms_main)
+
+[cms_shelter](https://hub.docker.com/r/snslabdocker/cms_shelter/tags)
+
 # 초기 구성
 
 ## Main
