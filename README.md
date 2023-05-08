@@ -42,6 +42,7 @@ Shelter 서버가 실행되는 image입니다.
 root 경로에
 - [LivingLab-ShelterServer (LP-86shelterCMS_ADD Branch)](https://github.com/DCUSnSLab/LivingLab-ShelterServer/tree/LP-86shelterCMS_ADD)
 - [LivingLab-CMS-IDLE (IDLE_2 Branch)](https://github.com/DCUSnSLab/LivingLab-CMS-IDLE.git)
+- [Livinglab_WiFi](https://github.com/DCUSnSLab/Livinglab_WiFi)
 가 clone되어 있으며,
 
 docker-compose를 통한 최초 Deploy 수행 시
