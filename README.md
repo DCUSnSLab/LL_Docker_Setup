@@ -30,12 +30,25 @@ Livinglab_CMS/Livinglab/Livinglab-CMS(Main)/cms_main_server/start_cms.sh
 
 ## snslabdocker/cms_shelter
 
-### 환경 구성
-
+### 버전 종속성
 - Ubuntu 22.04
 - Python 3.10.6
 - NVM(NPM) 8.15.0
 - Django 4.2
+
+### 저장소 구성 및 역할
+- [LivingLab-ShelterServer (LP-86shelterCMS_ADD Branch)](https://github.com/DCUSnSLab/LivingLab-ShelterServer/tree/LP-86shelterCMS_ADD)
+  - 최초 Deploy 시 Django 기반 데이터베이스 구축
+  - API 서버 역할 수행
+  - CMS-IDLE의 Client/client-react/public/ftp 경로와 심볼링 링크로 연결되어 있습니다. (API 서버에서 이미지 및 영상 기반 쿼리 수행 시 데이터 전송 위함)
+- [LivingLab-CMS-IDLE (IDLE_2 Branch)](https://github.com/DCUSnSLab/LivingLab-CMS-IDLE.git)
+  - React 기반 프론트엔드 역할 수행
+  - 광고 페이지, 컨텐츠, 커뮤니티 페이지 출력
+  - 컨테이너 최초 시작 시 start_shelter.sh 스크립트 실행
+  - Server/ 경로의 advertiser.py 스크립트를 통해 Django 데이터베이스에서 조회한 쿼리 결과를 Websocket 형태로 전송
+  - ftpMediaDownloadClient.py 파일을 통한 Main - Shelter 간 데이터 
+- [Livinglab_WiFi](https://github.com/DCUSnSLab/Livinglab_WiFi)
+  - 와이파이 페이지 출력을 위한 저장소
 
 Shelter 서버가 실행되는 image입니다.
 
