@@ -40,4 +40,4 @@ services:
         #  - /bin/bash start_shelter.sh
 
         volumes:
-          - ./data/shelter:/root/LivingLab-CMS-IDLE/Client/client_react/public/ftp
+          - ./data/shelter:/root/LL_Shelter_Sinage/Client/client_react/public/ftp

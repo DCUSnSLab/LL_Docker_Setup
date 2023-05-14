@@ -7,7 +7,6 @@
     <list default="true" id="6d877107-c54a-4122-85ca-dd1ec34475e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose_shelter.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose_shelter.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerfiles/shelter/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfiles/shelter/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +14,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -82,7 +86,8 @@
       <workItem from="1680077994298" duration="21545000" />
       <workItem from="1680519452231" duration="8914000" />
       <workItem from="1680628296228" duration="6706000" />
-      <workItem from="1684080407907" duration="1100000" />
+      <workItem from="1684080407907" duration="1877000" />
+      <workItem from="1684082625465" duration="586000" />
     </task>
     <task id="LOCAL-00001" summary="CMS setup via docker-compose">
       <created>1668699793060</created>
@@ -168,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680606110935</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="branch for Development">
+      <created>1684081777849</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684081777849</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +209,7 @@
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Modify Dockerfile and docker-compose_shelter.yml" />
     <MESSAGE value="Update Main README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Main README" />
+    <MESSAGE value="branch for Development" />
+    <option name="LAST_COMMIT_MESSAGE" value="branch for Development" />
   </component>
 </project>
