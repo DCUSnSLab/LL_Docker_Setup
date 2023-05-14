@@ -7,6 +7,7 @@
     <list default="true" id="6d877107-c54a-4122-85ca-dd1ec34475e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose_shelter.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose_shelter.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerfiles/shelter/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfiles/shelter/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +82,7 @@
       <workItem from="1680077994298" duration="21545000" />
       <workItem from="1680519452231" duration="8914000" />
       <workItem from="1680628296228" duration="6706000" />
+      <workItem from="1684080407907" duration="1100000" />
     </task>
     <task id="LOCAL-00001" summary="CMS setup via docker-compose">
       <created>1668699793060</created>

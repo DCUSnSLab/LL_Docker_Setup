@@ -15,7 +15,7 @@ services:
         - "5433:5433"
 
     cms-shelter:
-        image: snslabdocker/cms_shelter:2.3
+        image: snslabdocker/cms_shelter:develop
         #image: snslabserver/cms_shelter
         container_name: cms_shelter
         depends_on:
@@ -30,7 +30,7 @@ services:
           - "9021:9021"
           - "9999:9999"
         environment:
-          - CMS_MAIN_IP=203.250.32.193 # 메인 PC IP 주소
+          - CMS_MAIN_IP=203.250.35.123 # 메인 PC IP 주소
           - CMS_SHELTER_IP=203.250.32.193 # 쉘터의 IP 주소
           - DATABASE_IP=cms-shelter-db
         links:

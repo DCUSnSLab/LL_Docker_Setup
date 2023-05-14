@@ -45,32 +45,20 @@ ENV PATH $NODE_PATH:$PATH
 
 # Shelter server (Django based db construct)
 ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
-RUN git clone -b "Shelter" https://github.com/DCUSnSLab/LivingLab-ShelterServer.git
+RUN git clone -b "Shelter" https://github.com/DCUSnSLab/LL_Shelter_API-Server.git
 
 # CMS IDLE Page
 # For refresh cache
-# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
-RUN git clone -b "IDLE_2" https://github.com/DCUSnSLab/LivingLab-CMS-IDLE.git
-
-# WiFi page
-#ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
-RUN git clone -b "main" https://github.com/DCUSnSLab/LivinglabWiFi.git
-
-# OLD CMS Page
-# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
-RUN git clone -b "master" https://github.com/DCUSnSLab/Livinglab-CMS-OLD.git
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+RUN git clone -b "Sinage" https://github.com/DCUSnSLab/LL_Shelter_Sinage.git
 
 # Add symbolic link to IDLE page
-WORKDIR /root/LivinglabWiFi/public
-RUN ln -s /root/LivingLab-CMS-IDLE/Client/client_react/public simdir
+RUN ln -s /root/LL_Shelter_Sinage/Client/client_react/public simdir
 
-WORKDIR /root/LivingLab-CMS-IDLE/Client/client_react
+WORKDIR /root/LL_Shelter_Sinage/Client/client_react
 RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm use --delete-prefix $NODE_VERSION && npm install"
 
-WORKDIR /root/LivinglabWiFi
-RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm use --delete-prefix $NODE_VERSION && npm install"
-
-WORKDIR /root/LivingLab-CMS-IDLE
+WORKDIR /root/LL_Shelter_Sinage
 # Service ports
 EXPOSE 3000
 EXPOSE 5000
