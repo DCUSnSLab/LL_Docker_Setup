@@ -54,7 +54,7 @@ Main을 제외한 Shelter 파트 작업 진행자들의 경우
 
 https://github.com/DCUSnSLab/LL_Shelter_Sinage
 
-해당 저장소 내용을 로컬에 구축 후 진행해야 합니다.
+해당 저장소의 README를 참고하여 로컬에 환경 구축 후 진행하면 됩니다.
 
 - Main
   - Contents upload UI (노동원, 환경구축 과정이 위와 다르므로 별도 진행)
