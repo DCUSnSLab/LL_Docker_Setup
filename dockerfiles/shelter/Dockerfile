@@ -16,6 +16,7 @@ RUN apt-get install pip -y
 RUN apt-get install git -y
 RUN apt install curl -y
 RUN apt install net-tools -y
+RUN apt install jq -y
 
 # Install django and dependencies
 RUN pip install django
@@ -44,7 +45,7 @@ ENV NODE_PATH $NVM_DIR/versions/node/$NODE_VERSION/bin
 ENV PATH $NODE_PATH:$PATH
 
 # Shelter server (Django based db construct)
-ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone -b "Shelter" https://github.com/DCUSnSLab/LL_Shelter_API-Server.git
 
 # CMS IDLE Page
@@ -59,6 +60,7 @@ WORKDIR /root/LL_Shelter_Sinage/Client/client_react
 RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm use --delete-prefix $NODE_VERSION && npm install"
 
 WORKDIR /root/LL_Shelter_Sinage
+
 # Service ports
 EXPOSE 3000
 EXPOSE 5000

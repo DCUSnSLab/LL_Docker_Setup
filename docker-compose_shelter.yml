@@ -31,8 +31,10 @@ services:
           - "9999:9999"
         environment:
           - CMS_MAIN_IP=203.250.35.123 # 메인 PC IP 주소
-          - CMS_SHELTER_IP=203.250.32.193 # 쉘터의 IP 주소
           - DATABASE_IP=cms-shelter-db
+          - SHELTER_ID=5 # 쉘터 id
+          - SHELTER_NAME="auto" # 쉘터명
+          - SHELTER_AUTH_NUMBER="3549370" # 쉘터 인증번호
         links:
           - cms-shelter-db
         #command: sh -c "/bin/bash /root/LivingLab-CMS-IDLE/Client/client_react/start_idle.sh"
