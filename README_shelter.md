@@ -46,15 +46,40 @@ docker-compose_shelter.yml 파일이 있는 경로에서 아래 명령어를 통
 docker-compose -f docker-compose_shelter.yml up -d
 ```
 
-## 파트 별 환경 구축 및 개발 수행
+## 인원 별 저장소 및 개발 내용
+
+Jira의 각 티켓 참고해서 아래 저장소 기반 작업 진행하면 될 것 같습니다.
+
+Main을 제외한 Shelter 파트 작업 진행자들의 경우
+
+https://github.com/DCUSnSLab/LL_Shelter_Sinage
+
+해당 저장소 내용을 로컬에 구축 후 진행해야 합니다.
 
 - Main
-  - Contents upload UI (노동원, 임찬아)
+  - Contents upload UI (노동원, 환경구축 과정이 위와 다르므로 별도 진행)
+    - 저장소 및 작업 경로
+      - https://github.com/DCUSnSLab/LL_Main
+      - https://github.com/DCUSnSLab/LL_Main/tree/Main/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/templates/Userservice
+    - 업로드 페이지 URL
+      - http://203.250.35.123:8000/Userservice/UploadContent/1 
+      - http://203.250.35.123:8000/Userservice/AddCommunityComment/1
 
 
 - Shelter
   - Client
-    - Sinage (박보은)
+    - Sinage IDLE 페이지 (박보은)
+      - 저장소 및 작업 경로
+        - https://github.com/DCUSnSLab/LL_Shelter_Sinage
+        - https://github.com/DCUSnSLab/LL_Shelter_Sinage/tree/IDLE_2/Client/client_react/src/component
+    - Sinage Contents 리스트 페이지 (김경연)
+      - 저장소 및 작업 경로
+        - https://github.com/DCUSnSLab/LL_Shelter_Sinage
+        - https://github.com/DCUSnSLab/LL_Shelter_Sinage/blob/IDLE_2/Client/client_react/src/component/SignageShow.js
     - MediaPlayer (문지원)
+    - Community (임찬아)
+      - 저장소 및 작업 경로
+        - https://github.com/DCUSnSLab/LL_Shelter_Sinage
+        - https://github.com/DCUSnSLab/LL_Shelter_Sinage/blob/IDLE_2/Client/client_react/src/component/IssueBoard.js
   - Server
     - API-Server (박준홍)

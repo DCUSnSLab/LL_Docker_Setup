@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d877107-c54a-4122-85ca-dd1ec34475e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README_img/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README_img/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README_img/img_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README_img/img_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README_img/img_5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README_shelter.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_shelter.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerfiles/shelter/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfiles/shelter/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql_docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql_docker-compose_main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql_docker-compose_shelter.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +91,7 @@
       <workItem from="1684080407907" duration="1877000" />
       <workItem from="1684082625465" duration="1792000" />
       <workItem from="1684086635512" duration="1483000" />
-      <workItem from="1684088239460" duration="7229000" />
+      <workItem from="1684088239460" duration="11439000" />
     </task>
     <task id="LOCAL-00001" summary="CMS setup via docker-compose">
       <created>1668699793060</created>
@@ -207,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684125695365</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update README_shelter.md">
+      <created>1684133511923</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1684133511923</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +237,7 @@
     <MESSAGE value="branch for Development" />
     <MESSAGE value="Path update" />
     <MESSAGE value="shelter info update in docker-compose" />
-    <option name="LAST_COMMIT_MESSAGE" value="shelter info update in docker-compose" />
+    <MESSAGE value="Update README_shelter.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README_shelter.md" />
   </component>
 </project>
