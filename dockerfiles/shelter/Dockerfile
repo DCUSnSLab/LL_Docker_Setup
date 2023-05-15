@@ -16,6 +16,7 @@ RUN apt-get install pip -y
 RUN apt-get install git -y
 RUN apt install curl -y
 RUN apt install net-tools -y
+RUN apt install iputils-ping -y
 RUN apt install jq -y
 
 # Install django and dependencies
