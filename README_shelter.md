@@ -25,17 +25,6 @@
 git clone https://github.com/DCUSnSLab/LL_Shelter_Sinage.git
 ```
 
-이후 LL_Shelter_Sinage 프로젝트의 Client/client_react/public/ftp 경로와
-LL_Docker_Setup 프로젝트의 data/shelter 경로를 대상으로 심볼릭 링크를 생성한다.
-
-> 윈도우 사용 시 (관리자 권한 명령 프롬프트로 진행)
-```
-mklink /d "(인원 별 개인 환경)\LL_Docker_Setup\LL_Shelter_Sinage\Client\client_react\public\ftp" "(인원 별 개인 환경)\LL_Docker_Setup\data\shelter"
-```
-
-> 실행 결과
-![img.png](README_img/img_6.png)
-
 IDLE 페이지 작업은 위에서 clone한 저장소를 기준으로 진행한다.
 
 ## CMS를 통한 Main 서버 쉘터 생성
@@ -78,6 +67,18 @@ docker-compose_shelter.yml 파일이 있는 경로에서 아래 명령어를 통
 ```bash
 docker-compose -f docker-compose_shelter.yml up -d
 ```
+
+이후 LL_Shelter_Sinage 프로젝트의 Client/client_react/public/ftp 경로와
+LL_Docker_Setup 프로젝트의 data/shelter 경로를 대상으로 심볼릭 링크를 생성한다.
+
+> 윈도우 사용 시 (관리자 권한 명령 프롬프트로 진행)
+```
+mklink /d "(인원 별 개인 환경)\LL_Docker_Setup\LL_Shelter_Sinage\Client\client_react\public\ftp" "(인원 별 개인 환경)\LL_Docker_Setup\data\shelter"
+```
+
+> 실행 결과
+![img.png](README_img/img_6.png)
+
 
 ## 인원 별 저장소 및 개발 내용
 
