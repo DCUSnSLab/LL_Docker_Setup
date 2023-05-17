@@ -43,4 +43,3 @@ services:
 
         volumes:
           - ./data/shelter:/root/LL_Shelter_Sinage/Client/client_react/public/ftp
-          - ./LL_Shelter_Sinage/Client/client_react/public/ftp:/root/LL_Shelter_Sinage/Client/client_react/public/ftp
