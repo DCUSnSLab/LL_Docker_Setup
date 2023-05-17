@@ -46,7 +46,7 @@ ENV NODE_PATH $NVM_DIR/versions/node/$NODE_VERSION/bin
 ENV PATH $NODE_PATH:$PATH
 
 # Shelter server (Django based db construct)
-# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone -b "Shelter" https://github.com/DCUSnSLab/LL_Shelter_API-Server.git
 
 # CMS IDLE Page

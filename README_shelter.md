@@ -5,6 +5,39 @@
 - Docker
 - Docker-compose
 
+## 저장소 Clone
+
+2023 05 17
+
+진행에 앞서 LL_Docker_Setup, LL_Shelter_Signage 저장소의 내용이 변경되었으니
+
+기존 저장소 삭제 후 다시 clone 받은 후 아래 내용들 진행하기 바랍니다.
+
+구성에 필요한 docker image 또한 변경되었으니 아래 이미지처럼 새 이미지 Pull 이후 진행
+
+![img.png](README_img/img_7.png)
+
+---
+
+본 저장소(LL_Docker_Setup) Clone 후 LL_Docker_Setup 경로에서 아래 명령어 수행
+
+```bash
+git clone https://github.com/DCUSnSLab/LL_Shelter_Sinage.git
+```
+
+이후 LL_Shelter_Sinage 프로젝트의 Client/client_react/public/ftp 경로와
+LL_Docker_Setup 프로젝트의 data/shelter 경로를 대상으로 심볼릭 링크를 생성한다.
+
+> 윈도우 사용 시 (관리자 권한 명령 프롬프트로 진행)
+```
+mklink /d "(인원 별 개인 환경)\LL_Docker_Setup\LL_Shelter_Sinage\Client\client_react\public\ftp" "(인원 별 개인 환경)\LL_Docker_Setup\data\shelter"
+```
+
+> 실행 결과
+![img.png](README_img/img_6.png)
+
+IDLE 페이지 작업은 위에서 clone한 저장소를 기준으로 진행한다.
+
 ## CMS를 통한 Main 서버 쉘터 생성
 
 아래 주소를 통해 Main 서버에 접속한다.
@@ -50,20 +83,16 @@ docker-compose -f docker-compose_shelter.yml up -d
 
 Jira의 각 티켓 참고해서 아래 저장소 기반 작업 진행하면 될 것 같습니다.
 
-Main을 제외한 Shelter 파트 작업 진행자들의 경우
+본인 쉘터에 컨텐츠 업로드를 위해서는 아래 URL 패턴 마지막 숫자를 본인의 id로 변경하여 진행
+- http://203.250.35.123:8000/Userservice/UploadContent/1
+- http://203.250.35.123:8000/Userservice/AddCommunityComment/1
 
-https://github.com/DCUSnSLab/LL_Shelter_Sinage
-
-해당 저장소의 README를 참고하여 로컬에 환경 구축 후 진행하면 됩니다.
 
 - Main
   - Contents upload UI (노동원, 환경구축 과정이 위와 다르므로 별도 진행)
     - 저장소 및 작업 경로
       - https://github.com/DCUSnSLab/LL_Main
       - https://github.com/DCUSnSLab/LL_Main/tree/Main/Livinglab_CMS/Livinglab/Livinglab-CMS/cms_main_server/templates/Userservice
-    - 업로드 페이지 URL
-      - http://203.250.35.123:8000/Userservice/UploadContent/1 
-      - http://203.250.35.123:8000/Userservice/AddCommunityComment/1
 
 
 - Shelter

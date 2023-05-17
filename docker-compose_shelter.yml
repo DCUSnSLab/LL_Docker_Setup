@@ -25,16 +25,16 @@ services:
           - "8000:8000"
           # - "3000:3000"
           - "3001:3001"
-          # - "5000:5000"
+          - "5000:5000"
           - "7000:7000"
           - "9021:9021"
           - "9999:9999"
         environment:
           - CMS_MAIN_IP=203.250.35.123 # 메인 PC IP 주소
           - DATABASE_IP=cms-shelter-db
-          - SHELTER_ID=5 # 쉘터 id
-          - SHELTER_NAME="auto" # 쉘터명
-          - SHELTER_AUTH_NUMBER="3549370" # 쉘터 인증번호
+          - SHELTER_ID=3 # 쉘터 id
+          - SHELTER_NAME="Park" # 쉘터명
+          - SHELTER_AUTH_NUMBER="2573327" # 쉘터 인증번호
         links:
           - cms-shelter-db
         #command: sh -c "/bin/bash /root/LivingLab-CMS-IDLE/Client/client_react/start_idle.sh"
@@ -43,3 +43,4 @@ services:
 
         volumes:
           - ./data/shelter:/root/LL_Shelter_Sinage/Client/client_react/public/ftp
+          - ./LL_Shelter_Sinage/Client/client_react/public/ftp:/root/LL_Shelter_Sinage/Client/client_react/public/ftp

@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d877107-c54a-4122-85ca-dd1ec34475e6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README_img/img_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README_img/img_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README_shelter.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_shelter.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose_shelter.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose_shelter.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerfiles/shelter/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfiles/shelter/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,20 +36,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/박준홍/PycharmProjects/CMS_Deploy&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/박준홍/PycharmProjects/LL_Docker_Setup",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\박준홍\PycharmProjects\CMS_Deploy" />
@@ -52,6 +58,8 @@
       <recent name="C:\Users\junhp\OneDrive\바탕 화면\박준홍\Development\CMS_Deploy" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\박준홍\PycharmProjects\LL_Docker_Setup\README_img" />
+      <recent name="C:\Users\박준홍\PycharmProjects\LL_Docker_Setup\README_img\img_6.png" />
       <recent name="C:\Users\박준홍\PycharmProjects\CMS_Deploy\README_img" />
       <recent name="D:\Development\CMS_Deploy\dockerfiles\main" />
       <recent name="D:\Development\CMS_Deploy\dockerfiles\shelter" />
@@ -92,6 +100,7 @@
       <workItem from="1684082625465" duration="1792000" />
       <workItem from="1684086635512" duration="1483000" />
       <workItem from="1684088239460" duration="11858000" />
+      <workItem from="1684302948371" duration="3712000" />
     </task>
     <task id="LOCAL-00001" summary="CMS setup via docker-compose">
       <created>1668699793060</created>
@@ -223,7 +232,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
