@@ -15,7 +15,7 @@ services:
         - "5433:5433"
 
     cms-shelter:
-        image: snslabdocker/cms_shelter:develop
+        image: snslabdocker/cms_shelter:2.9
         #image: snslabserver/cms_shelter
         container_name: cms_shelter
         depends_on:
@@ -23,14 +23,15 @@ services:
         restart: always
         ports:
           - "8000:8000"
-          # - "3000:3000"
+          - "3000:3000"
           - "3001:3001"
           - "5000:5000"
-          - "7000:7000"
+          # - "7000:7000"
           - "9021:9021"
-          - "9999:9999"
+          # - "9999:9999"
         environment:
           - CMS_MAIN_IP=203.250.35.123 # 메인 PC IP 주소
+          - CMS_SHELTER_IP=203.250.35.123 # 쉘터 PC IP 주소
           - DATABASE_IP=cms-shelter-db
           - SHELTER_ID=3 # 쉘터 id
           - SHELTER_NAME="Park" # 쉘터명
