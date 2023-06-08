@@ -15,7 +15,7 @@ services:
         - "5433:5433"
 
     cms-shelter:
-        image: snslabdocker/cms_shelter:2.9
+        image: snslabdocker/cms_shelter:3.5
         #image: snslabserver/cms_shelter
         container_name: cms_shelter
         depends_on:
@@ -30,15 +30,16 @@ services:
           - "9021:9021"
           # - "9999:9999"
         environment:
-          - CMS_MAIN_IP=203.250.35.123 # 메인 PC IP 주소
-          - CMS_SHELTER_IP=203.250.35.123 # 쉘터 PC IP 주소
+          - CMS_MAIN_IP=203.250.35.98 # 메인 PC IP 주소
+          - CMS_SHELTER_IP=203.250.32.193 # 쉘터 PC IP 주소
           - DATABASE_IP=cms-shelter-db
-          - SHELTER_ID=3 # 쉘터 id
-          - SHELTER_NAME="Park" # 쉘터명
-          - SHELTER_AUTH_NUMBER="2573327" # 쉘터 인증번호
+          - SHELTER_ID=1 # 쉘터 id
+          - SHELTER_NAME="DCU" # 쉘터명
+          - SHELTER_AUTH_NUMBER="4648569" # 쉘터 인증번호
         links:
           - cms-shelter-db
         #command: sh -c "/bin/bash /root/LivingLab-CMS-IDLE/Client/client_react/start_idle.sh"
+        #command: sh -c "/bin/bash while true; sleep 7200s;"
         #command:
         #  - /bin/bash start_shelter.sh
 

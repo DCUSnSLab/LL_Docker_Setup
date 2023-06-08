@@ -46,29 +46,31 @@ ENV NODE_PATH $NVM_DIR/versions/node/$NODE_VERSION/bin
 ENV PATH $NODE_PATH:$PATH
 
 # Shelter server (Django based db construct)
-ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
-RUN git clone -b "Shelter" https://github.com/DCUSnSLab/LL_Shelter_API-Server.git
+# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+RUN git clone -b "Shelter" https://github.com/DCUSnSLab/LL_Shelter_API-Server
 
 # CMS IDLE Page
 # For refresh cache
 ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
-RUN git clone -b "Sinage" https://github.com/DCUSnSLab/LL_Shelter_Sinage.git
+RUN git clone -b "IDLE_2" https://github.com/DCUSnSLab/LL_Shelter_Sinage
 
-# Add symbolic link to IDLE page
-RUN ln -s /root/LL_Shelter_Sinage/Client/client_react/public simdir
+# WiFi page
+# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+RUN git clone -b "main" https://github.com/DCUSnSLab/LL_Shelter_WIFI
 
 WORKDIR /root/LL_Shelter_Sinage/Client/client_react
+RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm use --delete-prefix $NODE_VERSION && npm install --legacy-peer-deps"
+
+WORKDIR /root/LL_Shelter_WIFI
 RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm use --delete-prefix $NODE_VERSION && npm install"
 
 WORKDIR /root/LL_Shelter_Sinage
-
 # Service ports
 EXPOSE 3000
+EXPOSE 3001
 EXPOSE 5000
-EXPOSE 7000
 EXPOSE 8000
 EXPOSE 9021
-EXPOSE 9999
 
 CMD sh start_shelter.sh
 # CMD while true; do echo test; sleep 100; done
