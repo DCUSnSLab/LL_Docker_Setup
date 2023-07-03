@@ -18,6 +18,7 @@ RUN apt install curl -y
 RUN apt install net-tools -y
 RUN apt install iputils-ping -y
 RUN apt install jq -y
+RUN apt install x11-apps -y
 
 # Install django and dependencies
 RUN pip install django
@@ -25,6 +26,7 @@ RUN pip install djangorestframework
 RUN pip install django-cors-headers
 RUN pip install psycopg2-binary
 RUN pip install django-tinymce
+RUN pip install django-watchman
 RUN pip install pymysql
 RUN pip install pillow
 RUN pip install tzdata
@@ -33,6 +35,7 @@ RUN pip install tzdata
 RUN pip install schedule
 RUN pip install websockets
 RUN pip install tabulate
+RUN pip install sysv_ipc
 
 # Install nvm and npm env
 RUN mkdir -p /usr/local/nvm
@@ -46,7 +49,7 @@ ENV NODE_PATH $NVM_DIR/versions/node/$NODE_VERSION/bin
 ENV PATH $NODE_PATH:$PATH
 
 # Shelter server (Django based db construct)
-# ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone -b "Shelter" https://github.com/DCUSnSLab/LL_Shelter_API-Server
 
 # CMS IDLE Page
@@ -57,6 +60,9 @@ RUN git clone -b "IDLE_2" https://github.com/DCUSnSLab/LL_Shelter_Sinage
 # WiFi page
 # ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone -b "main" https://github.com/DCUSnSLab/LL_Shelter_WIFI
+
+# Media Player
+RUN git clone -b "LIV-402_syncwithIDLE" https://github.com/DCUSnSLab/LL_Shelter_MediaPlayer.git
 
 WORKDIR /root/LL_Shelter_Sinage/Client/client_react
 RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm use --delete-prefix $NODE_VERSION && npm install --legacy-peer-deps"

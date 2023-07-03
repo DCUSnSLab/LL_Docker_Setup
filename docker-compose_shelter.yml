@@ -15,7 +15,7 @@ services:
         - "5433:5433"
 
     cms-shelter:
-        image: snslabdocker/cms_shelter:3.5
+        image: snslabdocker/cms_shelter:4.3
         #image: snslabserver/cms_shelter
         container_name: cms_shelter
         depends_on:
@@ -36,6 +36,7 @@ services:
           - SHELTER_ID=1 # 쉘터 id
           - SHELTER_NAME="DCU" # 쉘터명
           - SHELTER_AUTH_NUMBER="4648569" # 쉘터 인증번호
+          - DISPLAY=$DISPLAY
         links:
           - cms-shelter-db
         #command: sh -c "/bin/bash /root/LivingLab-CMS-IDLE/Client/client_react/start_idle.sh"
@@ -44,4 +45,7 @@ services:
         #  - /bin/bash start_shelter.sh
 
         volumes:
+          - /tmp/.X11-unix:/tmp/.X11-unix
           - ./data/shelter:/root/LL_Shelter_Sinage/Client/client_react/public/ftp
+          #
+          # - ./data/shelter/django:/root/LL_Shelter_API-Server

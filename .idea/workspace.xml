@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d877107-c54a-4122-85ca-dd1ec34475e6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CMS_Deploy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CMS_Deploy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LL_Shelter_Sinage/Client/client_react/public/ftp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose_shelter.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose_shelter.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dockerfiles/shelter/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfiles/shelter/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerfiles/shelter_tmp/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfiles/shelter_tmp/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,21 +32,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/박준홍/PycharmProjects/LL_Docker_Setup/data/shelter",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/박준홍/PycharmProjects/LL_Docker_Setup/data/shelter&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\박준홍\PycharmProjects\CMS_Deploy" />
@@ -130,7 +128,9 @@
       <workItem from="1684088239460" duration="11858000" />
       <workItem from="1684302948371" duration="5096000" />
       <workItem from="1685418969677" duration="625000" />
-      <workItem from="1685593149395" duration="19945000" />
+      <workItem from="1685593149395" duration="25826000" />
+      <workItem from="1686909688712" duration="3870000" />
+      <workItem from="1687847179953" duration="7731000" />
     </task>
     <task id="LOCAL-00001" summary="CMS setup via docker-compose">
       <created>1668699793060</created>
