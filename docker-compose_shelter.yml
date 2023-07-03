@@ -15,12 +15,15 @@ services:
         - "5433:5433"
 
     cms-shelter:
-        image: snslabdocker/cms_shelter:4.3
+        image: snslabdocker/cms_shelter:4.2
         #image: snslabserver/cms_shelter
         container_name: cms_shelter
         depends_on:
           - cms-shelter-db
         restart: always
+        cap_add:
+          - IPC_OWNER
+        ipc: host
         ports:
           - "8000:8000"
           - "3000:3000"
@@ -31,7 +34,7 @@ services:
           # - "9999:9999"
         environment:
           - CMS_MAIN_IP=203.250.35.98 # 메인 PC IP 주소
-          - CMS_SHELTER_IP=203.250.32.193 # 쉘터 PC IP 주소
+          - CMS_SHELTER_IP=203.250.35.49 # 쉘터 PC IP 주소
           - DATABASE_IP=cms-shelter-db
           - SHELTER_ID=1 # 쉘터 id
           - SHELTER_NAME="DCU" # 쉘터명
@@ -45,7 +48,4 @@ services:
         #  - /bin/bash start_shelter.sh
 
         volumes:
-          - /tmp/.X11-unix:/tmp/.X11-unix
           - ./data/shelter:/root/LL_Shelter_Sinage/Client/client_react/public/ftp
-          #
-          # - ./data/shelter/django:/root/LL_Shelter_API-Server
